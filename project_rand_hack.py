@@ -11,7 +11,7 @@ class RandomCracker:
             return
         bits = self.to_bitarray(num)
 
-        assert(all([x == 0 or x == 1 for x in bits]))
+#        assert(all([x == 0 or x == 1 for x in bits]))
 
         self.counter +=1
         self.mt.append(self.harden_inverse(bits))
