@@ -20,7 +20,7 @@ class TestRandomCracker(unittest.TestCase):
         for i in range(624):
             self.randomCracker.submit(random.randint(0, 4294967294))
         self.assertTrue(sum([random.randint(0, 4294967294) == self.randomCracker.predict()
-                                 for i in range(100)]) > 90)
+                                 for i in range(100)]) >= 100)
 
     def test10000(self):
         random.seed(time.time() + 1)
